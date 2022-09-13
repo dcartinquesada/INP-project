@@ -1,5 +1,5 @@
 # INP-project
-Common errors found during the first phase of the installation:
+Common errors found during the phase of the installation:
 
 1. ROS1 is not compatible with Ubuntu 22.4: 
   In this case, it was necessary to delete the Ubuntu 22.4 once it was configured in order to switch to Ubuntu 20.4. Due to the fact that ROS1 is an old system, it is better to check its compatibility.
@@ -17,14 +17,30 @@ Specific packages can be found like:
 AUTOMATIC OPENING:
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc source ~/.bashrc
 
+PREBUILT INSTALLING:
+sudo apt-get install ros-noetic-catkin
 
+Then ROS WORKSPACE:
+CREATE:
+  mkdir -p ~/catkin_ws/src
+CHANGE:
+  cd ~/catkin_ws/
+BUILD:  
+  catkin_make
+  
+ROS PACKAGE:
+CHANGE: cd ~/catkin_ws/src
+
+catkin_create_pkg ultimaker std_msgs rospy roscpp
+cd ~/catkin_ws
+catkin_make
+. ~/catkin_ws/devel/setup.bash
 
 
 HOW TO SUSCRIBE?
 publisher = talker
 suscriber = listener
-1. Create a workspace as well as a package (catkin Build System)
-2. 
+Create a workspace as well as a package (catkin Build System)
 
 
 Command to see ROS Computation Graph: 
@@ -52,4 +68,18 @@ In Python each subscriber is running in a different thread and therefore there t
 
 To close the session, use:
   rosout
+
+FIRST STEPS:
+rosrun (ROS command to run a node) turtlesim (ROS package where the ROS node is located) turtlesim_node (ROS node to execute)
+
+In order to understand a topic or a node, use the command: rostopic info ********** 
+To see the content of the message when it is published:
+  rostopic echo ****
+  
+To see the message:
+rosmsg show geometry_msgs/Twist (topic name)
+
+rostopic echo /turtle1/pose
+
+. ~/catkin_ws/devel/setup.bash
 
