@@ -31,11 +31,18 @@ BUILD:
 ROS PACKAGE:
 CHANGE: cd ~/catkin_ws/src
 
+USE THIS IN CASE OF "NO SUCH PACKAGE OR STACK 'BEGINNER_TUTORIALS'"
 catkin_create_pkg ultimaker std_msgs rospy roscpp
 cd ~/catkin_ws
 catkin_make
 . ~/catkin_ws/devel/setup.bash
+http://wiki.ros.org/ROS/Tutorials/CreatingPackage
 
+Download the talker.py  
+wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+
+To view and edit the file with  $ rosed beginner_tutorials talker.py 
+ 
 
 HOW TO SUSCRIBE?
 publisher = talker
