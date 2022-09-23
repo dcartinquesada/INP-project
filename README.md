@@ -90,3 +90,7 @@ rostopic echo /turtle1/pose
 
 . ~/catkin_ws/devel/setup.bash
 
+
+RELATED TO THE HARDWARE:
+Once the Ultimaker was connected, it displayed a message related to a port connection: TEMP PORT ERROR: BED.
+It was solved simulating a "temperature sensor" with a resistance of 100 Ohm.
