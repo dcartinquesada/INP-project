@@ -94,3 +94,20 @@ rostopic echo /turtle1/pose
 RELATED TO THE HARDWARE:
 Once the Ultimaker was connected, it displayed a message related to a port connection: TEMP PORT ERROR: BED.
 It was solved simulating a "temperature sensor" with a resistance of 100 Ohm.
+
+Once the electronic part is fixed, there's a new error message related to the software. ERROR MESSAGES:
+-E: Unable to locate packages
+Once the terminal is open:
+bash: /opt/ros/kinetic/setup.bash: No such file or directory
+bash: /opt/ros/kinetic/setup.bash: No such file or directory
+
+danniela@danniela-ThinkPad-X220:/etc/ros/rosdep/sources.list.d$ sudo rosdep init
+[sudo] password for danniela: 
+ERROR: default sources list file already exists:
+	/etc/ros/rosdep/sources.list.d/20-default.list
+Please delete if you wish to re-initialize
+danniela@danniela-ThinkPad-X220:/etc/ros/rosdep/sources.list.d$ sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
+danniela@danniela-ThinkPad-X220:/etc/ros/rosdep/sources.list.d$
+
+SO the github .zip is downloaded again in order to complete the installation.
+
