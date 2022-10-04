@@ -111,3 +111,5 @@ danniela@danniela-ThinkPad-X220:/etc/ros/rosdep/sources.list.d$
 
 SO the github .zip is downloaded again in order to complete the installation.
 
+In order to add the source command: $ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+
