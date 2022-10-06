@@ -130,3 +130,5 @@ If the error message received is the following one:
 Unable to register with master node [http://localhost:11311/]: master may not be running yet. Will keep trying.
 Then try first: "roscore", in order to start any ROS runnning.
 
+Remember to install pip install serial, pip install esptool, pip install pyserial in order to start the serial connection. 
+Then, run the listener node!
