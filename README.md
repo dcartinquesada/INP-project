@@ -112,4 +112,21 @@ danniela@danniela-ThinkPad-X220:/etc/ros/rosdep/sources.list.d$
 SO the github .zip is downloaded again in order to complete the installation.
 
 In order to add the source command: $ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+Use this link to clone the repository: https://github.com/ad0409/open-laboratory-environment.git
+
+cd ~/catkin_ws/src
+git clone -b noetic-devel https://github.com/ad0409/open-laboratory-environment.git
+
+And to verify ROS version:  echo $ROS_DISTRO
+Do not forget to execute: source ~/catkin_ws/devel/setup.bash
+
+Error when executing .py with rosrun:
+[rosrun] Couldn't find executable named /opt/ros/noetic/share/rospy//opt/ros/noetic/share/rospy/open-laboratory-environment/ultimaker_talker.py
+
+I tried with "echo" in order to verify it exists; it shows correctly. But once it is trying to find the path with the ROS commands, it doesn't work.
+It is necessary to check CMake. 
+
+If the error message received is the following one:
+Unable to register with master node [http://localhost:11311/]: master may not be running yet. Will keep trying.
+Then try first: "roscore", in order to start any ROS runnning.
 
